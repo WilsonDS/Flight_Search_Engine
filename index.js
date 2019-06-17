@@ -83,6 +83,9 @@ function search_flight() {
 		$("#mySlide").hide();
 
 		//Disable the search Button
+		$("#origin").attr("disabled", true);
+		$("#destination").attr("disabled", true);
+		$("#journey_date").attr("disabled", true);
 		$("#search").attr("disabled", true);
 
 		//Filtering JSON by the input from the HTML
@@ -92,6 +95,12 @@ function search_flight() {
 		for (var j = 0; j < new_Array.length; j++) {
 			var newdiv = document.createElement("div");
 			newdiv.innerHTML = "Origin : " + new_Array[j].From + "</br></br>Destination :" + new_Array[j].To + "</br><input type='submit' value='Select' style='float:right;' onclick='reset()'></br>Airline :" + new_Array[j].Flight_name + "</br/></br>Amount :" + new_Array[j].Amount + "</br></br></br> ";
+			document.getElementById("div_1").appendChild(newdiv);
+		}
+		if(new_Array.length===0)
+		{
+			var newdiv = document.createElement("div");
+			newdiv.innerHTML = "<center><label>No Data Found</label></center>";
 			document.getElementById("div_1").appendChild(newdiv);
 		}
 	}
