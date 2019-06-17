@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Demo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="index.js"></script>
+</head>
+<body>
+	<header>
+		<img class="header_left" src="img/header.png" alt="">
+		<br>
+		<b style="font-size:20px;">Flight Search Engine</b>
+		</img>
+	</header>
+	<section>
+		<nav>
+			<label style="float:right; color:red">* Mandatory</label></br></br>
+			<label>From*</lable>
+				</br>
+				<input type="text" id="origin" placeholder="Enter Origin" style="width: 100%"/>
+				</br>
+				</br/>
+				<label>To*</lable>
+					</br>
+					<input type="text" id="destination" placeholder="Enter Destination" style="width: 100%"/>
+					</br>
+					</br/>
+					<label>Journey Date*</label>
+					</br>
+					<input type="date" id="journey_date" style="width: 100%"/>
+					</br>
+					</br>
+					<input type="submit" id="search" value="Search" onclick="search_flight()" style="width: 49%"/>
+					<input type="submit" value="Reset" onclick="reset()" style="width: 49%"/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<label class="mandatory_field" id="mandatory_fields"></label>
+		</nav>
+		<article>
+			<div id="spinner" class="loader"></div>
+			<div id="mySlide">
+				<img class="mySlides" src="img/Slide1.jpg" style="height:450px; width:100%">
+				<img class="mySlides" src="img/Slide2.jpg" style="height:450px; width:100%">
+				<img class="mySlides" src="img/Slide3.jpg" style="height:450px; width:100%">
+				<img class="mySlides" src="img/Slide4.jpg" style="height:450px; width:100%">
+			</div>
+			<div id="div_1"></div>
+		</article>
+	</section>
+	<footer>
+		<p>
+			<i>Copyright &copy;2019</i>
+		</p>
+	</footer>
+</body>
+</html>
